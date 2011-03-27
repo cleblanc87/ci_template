@@ -1,0 +1,11 @@
+div {
+  background-color: #dddddd; }
+  div p.lol {
+    color: #00aa00;
+    margin-top: 10px; }
+
+canvas {
+  border: dotted thin black;
+  height: 200px;
+  width: 200px; }
+
