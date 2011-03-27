@@ -1,0 +1,8 @@
+[26-Mar-2011 16:14:32] PHP Parse error:  syntax error, unexpected T_INCLUDE in /home7/fastflas/public_html/cleblanc/run_watchers.php on line 3
+[26-Mar-2011 16:14:52] PHP Fatal error:  Call to undefined function  watch_haml() in /home7/fastflas/public_html/cleblanc/run_watchers.php on line 6
+[26-Mar-2011 16:15:27] PHP Fatal error:  Call to undefined function  sass_watch() in /home7/fastflas/public_html/cleblanc/run_watchers.php on line 7
+[26-Mar-2011 16:15:52] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 24 bytes) in /home7/fastflas/public_html/cleblanc/sass/SassFile.php on line 139
+[26-Mar-2011 16:25:47] PHP Fatal error:  Call to undefined function  oohaml_watch() in /home7/fastflas/public_html/cleblanc/create_haml.php on line 43
+[26-Mar-2011 16:31:25] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home7/fastflas/public_html/cleblanc/hs_config.php on line 6
+[26-Mar-2011 16:34:48] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 3 bytes) in /home7/fastflas/public_html/cleblanc/sass/script/literals/SassNumber.php on line 84
+[26-Mar-2011 16:35:06] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 20480 bytes) in /home7/fastflas/public_html/cleblanc/haml/HamlParser.php on line 441
