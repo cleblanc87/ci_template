@@ -1,5 +1,5 @@
 <?php
-require_once '/home/chris/public_html/cleblanc/haml/HamlHelpers.php';
+require_once '/home/ubuntu/public_html/haml/HamlHelpers.php';
 ?><head>
 <link href="../stylesheets/screen.css" rel="stylesheet" type="text/css" /></head><div>
 <?php echo $ci_msg_str; ?>
