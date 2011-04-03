@@ -1,27 +1,70 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Welcome extends MY_Controller {
+  public function index() {
+    $this->load->view('head');
+    $this->load->view('header_start');
+    $this->load->view('header_content');
+    $this->load->view('header_end');
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -  
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in 
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
-	public function index()
-	{
-          $data['ci_msg_str'] = 'looks like we need to use the php tags unless we can incorporate tpl :O. Also inspect this element<? o cool php tags in the data array become comment s?>';
-	  $this->load->view('welcome_message', $data);
-	}
+    $this->load->view('slider_begin');
+    $this->load->view('slider_item');
+    $this->load->view('slider_item');
+    $this->load->view('slider_end');
+
+    $this->load->view('begin_main');
+    $this->load->view('news_begin');
+    $this->load->view('news_item');
+    $this->load->view('news_end');
+    $this->load->view('pagination');
+    $this->load->view('end_main');
+
+    $this->load->view('sidebar_begin');
+
+    $this->load->view('reviews_begin');
+    $this->load->view('side_panel_begin');
+    $this->load->view('side_panel_item');
+    $this->load->view('side_panel_end');
+    $this->load->view('reviews_end');
+
+    $this->load->view('side_bar_ad');
+
+    $this->load->view('sidepanel_item_begin');
+    $this->load->view('side_panel_simple_item');
+    $this->load->view('sidepanel_item_end');
+
+    $this->load->view('sidepanel_item_begin');
+    $this->load->view('side_panel_media_item');
+    $this->load->view('sidepanel_item_end');
+
+    $this->load->view('sidebar_end');
+    $this->load->view('end_main');
+
+    $this->load->view('footer_top_begin');
+    $this->load->view('footer_navigation');
+    $this->load->view('footer_top_end');
+
+    $this->load->view('begin_footer');
+    $this->load->view('footer');
+    $this->load->view('end_footer');
+  }
+
+  public function create() {    
+    $u = new User();
+    $u->username = 'yuser';
+    $u->password = 'ypass';
+    $u->referer_id = -1;
+    $u->save(); 
+  }
+
+  public function get($user) {
+  }
+
+  public function update($user) {
+  }
+
+  public function remove($user) {
+  }
 }
 
 /* End of file welcome.php */

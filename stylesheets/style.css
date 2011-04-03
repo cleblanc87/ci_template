@@ -1,0 +1,928 @@
+@import url("reset.css");
+@import url("jquery.fancybox-1.3.4.css");
+
+body {
+  background: #dadada;
+  font: 12px Arial, sans-serif;
+  color: #3a3a3a; }
+
+a {
+  color: #2c7600;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+#header-wrapper {
+  background: url(../images/header-bg.png) repeat-x;
+  height: 202px; }
+
+#header {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2; }
+
+#logo {
+  position: absolute;
+  top: 41px;
+  left: 0; }
+
+#header-banner {
+  position: absolute;
+  right: 0;
+  top: 63px; }
+
+#social-media {
+  float: right;
+  padding-top: 7px; }
+
+#top-navigation {
+  height: 24px;
+  padding-top: 8px;
+  float: left; }
+  #top-navigation li {
+    float: left;
+    display: block;
+    margin-right: 20px;
+    text-shadow: 1px 1px 1px black;
+    position: relative;
+    height: 24px;
+    z-index: 100; }
+    #top-navigation li a {
+      display: block;
+      color: #7d7d7d; }
+    #top-navigation li:hover {
+      visibility: inherit; }
+    #top-navigation li ul {
+      left: -999px;
+      position: absolute;
+      z-index: 1;
+      top: 24px;
+      border: 1px solid black;
+      border-top: none;
+      width: 140px;
+      background: #121212; }
+      #top-navigation li ul li {
+        float: none;
+        background: url(../images/nav-item-bg.png) repeat-x;
+        height: 25px;
+        margin: 0;
+        padding: 9px 0 0 10px;
+        text-shadow: 1px 1px 1px black; }
+        #top-navigation li ul li a {
+          font-size: 12px; }
+    #top-navigation li:hover ul {
+      left: 0; }
+      #top-navigation li ul li ul {
+        top: -999px; }
+      #top-navigation li ul li:hover ul {
+        left: 140px;
+        top: 0; }
+        #top-navigation li ul li ul li ul {
+          top: -999px; }
+        #top-navigation li ul li ul li:hover ul {
+          left: 140px;
+          top: 0; }
+
+#navigation-wrapper {
+  position: absolute;
+  top: 156px;
+  width: 960px;
+  left: 0; }
+
+#nvigation {
+  height: 46px;
+  float: left; }
+
+#navigation li {
+  display: block;
+  float: left;
+  margin-right: 30px;
+  position: relative;
+  padding-top: 13px;
+  height: 46px;
+  text-shadow: 1px 1px 1px black; }
+  #navigation li a {
+    font-size: 14px;
+    color: white;
+    font-weight: bold; }
+  #navigation li:hover {
+    visibility: inherit; }
+  #navigation li ul {
+    left: -999px;
+    position: absolute;
+    z-index: 1;
+    top: 45px;
+    border: 1px solid black;
+    border-top: none;
+    width: 140px; }
+    #navigation li ul li {
+      float: none;
+      background: url(../images/nav-item-bg.png) repeat-x;
+      height: 25px;
+      margin: 0;
+      padding: 9px 0 0 10px;
+      text-shadow: 1px 1px 1px black; }
+      #navigation li ul li a {
+        font-size: 12px; }
+  #navigation li:hover ul {
+    left: 0; }
+    #navigation li ul li ul {
+      top: -999px; }
+    #navigation li ul li:hover ul {
+      left: 140px;
+      top: 0; }
+      #navigation li ul li ul li ul {
+        top: -999px; }
+      #navigation li ul li ul li:hover ul {
+        left: 140px;
+        top: 0; }
+
+#search {
+  float: right;
+  width: 163px;
+  height: 25px;
+  background: url(../images/search-bg.png) no-repeat;
+  margin-top: 7px;
+  padding: 6px 0 0 9px; }
+  #search input {
+    background: none;
+    border: none;
+    color: #555555;
+    width: 130px; }
+
+.slider {
+  position: relative;
+  background: black;
+  z-index: 1; }
+
+.sliderContent {
+  overflow: hidden;
+  height: 280px;
+  position: relative; }
+
+.featured-inner {
+  width: 960px;
+  margin: 0 auto;
+  position: relative; }
+
+.featured-arrows {
+  background: url(../images/featured-arrows.png) no-repeat;
+  height: 52px;
+  width: 39px;
+  position: absolute;
+  top: 160px; }
+
+.featured-inner h1 {
+  position: absolute;
+  top: 160px;
+  left: 39px;
+  background: black;
+  color: white;
+  font-size: 34px;
+  padding: 7px 10px 3px 10px;
+  font-family: "BebasNeueRegular"; }
+  .featured-inner h1 a {
+    color: white; }
+
+.featured-meta {
+  background: url(../images/featured-meta.png) repeat-x;
+  height: 26px;
+  left: 0;
+  top: 211px;
+  position: absolute;
+  color: #8e8e8e;
+  text-shadow: 1px 1px 1px black;
+  text-transform: uppercase;
+  padding: 8px 10px 0 10px; }
+
+.top-overlay {
+  background: url(../images/top-overlay.png) repeat-x;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  height: 30px; }
+
+.bottom-overlay {
+  background: url(../images/bottom-overlay.png) repeat-x;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 30px; }
+
+.sliderArrows a {
+  display: block;
+  text-indent: -9999px;
+  outline: none;
+  z-index: 50;
+  background-image: url(../images/prev_next.png);
+  width: 42px;
+  height: 43px;
+  position: absolute;
+  top: 50%;
+  margin-top: -34px; }
+
+.prev {
+  background-position: 0 0;
+  left: 10px; }
+  .prev:hover {
+    background-position: 0 -44px; }
+
+.next {
+  right: 10px;
+  background-position: -44px 0; }
+  .next:hover {
+    background-position: -44px -44px; }
+
+#main-wrapper {
+  width: 920px;
+  background: white;
+  margin: 0 auto;
+  padding: 20px;
+  overflow: hidden; }
+
+#main {
+  width: 600px;
+  margin-right: 20px;
+  float: left; }
+
+.section-title {
+  background: url(../images/section-title.png) repeat;
+  padding: 9px 9px 6px 9px;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 1px white;
+  font-size: 28px;
+  font-family: "BebasNeueRegular"; }
+
+#news-wrapper {
+  margin-bottom: 24px; }
+
+.news-item {
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 30px;
+  padding-bottom: 25px; }
+
+.news-thumb-wrapper {
+  position: relative; }
+  .news-thumb-wrapper h1 {
+    position: absolute;
+    color: white;
+    left: 40px;
+    top: 220px;
+    background: black;
+    padding: 8px 9px 7px 9px;
+    font-size: 24px;
+    font-family: BebasNeueRegular; }
+    .news-thumb-wrapper h1 a {
+      color: white; }
+
+.news-thumb {
+  border: 1px solid #cccccc;
+  margin-right: 12px;
+  float: left; }
+
+.news-arrows {
+  position: absolute;
+  left: 0;
+  top: 220px;
+  height: 44px;
+  width: 40px;
+  background: url(../images/news-arrows.png) no-repeat; }
+
+.news-meta-wrapper {
+  background: url(../images/section-title.png) repeat;
+  height: 25px;
+  border-bottom: 1px solid #cccccc;
+  margin-top: -3px;
+  padding: 9px 9px 0 9px;
+  margin-bottom: 10px; }
+  .news-meta-wrapper span {
+    text-shadow: 1px 1px 1px white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+
+.news-meta {
+  color: #777777;
+  float: left; }
+
+.news-cats {
+  float: right; }
+
+.news-item p {
+  line-height: 18px; }
+
+#sidebar {
+  width: 300px;
+  float: right; }
+
+.widget,
+.widget-wrapper {
+  margin-bottom: 20px; }
+
+.widget-title {
+  background: url(../images/widget-top.png) no-repeat;
+  color: white;
+  height: 32px;
+  padding: 8px 0 0 50px;
+  text-shadow: 1px 1px 1px black;
+  margin-bottom: 20px;
+  font-family: "BebasNeueRegular";
+  font-size: 22px; }
+  .widget-title.tabs {
+    margin-bottom: 0; }
+
+.widget-banner {
+  margin-bottom: 20px;
+  overflow: hidden; }
+
+.side-item {
+  float: none !important;
+  clear: both;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #cccccc;
+  overflow: hidden;
+  width: 300px;
+  position: relative; }
+  .side-item.last {
+    margin-bottom: 0; }
+  .side-item h4 {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 4px; }
+
+.side-item-meta {
+  color: #888888;
+  font-size: 11px;
+  font-style: italic; }
+
+.side-item-cat {
+  color: #666666;
+  margin-bottom: 2px;
+  display: block; }
+
+.side-item-thumb {
+  float: left;
+  margin-right: 10px;
+  border: 1px solid #cccccc;
+  height: 60px; }
+
+.panel-wrapper {
+  background: url(../images/panel-bg.png) repeat-x;
+  height: 22px;
+  padding: 7px 0 0 9px;
+  margin-bottom: 20px; }
+  .panel-wrapper a {
+    margin-right: 9px;
+    color: #777777;
+    text-shadow: 1px 1px 1px white; }
+    .panel-wrapper a.selected {
+      font-weight: bold;
+      color: #3a3a3a; }
+
+#mask {
+  width: 300px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative; }
+
+#panel div {
+  float: left;
+  width: 300px; }
+
+.side-score {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 30px !important;
+  height: 21px;
+  text-align: center;
+  padding-top: 5px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #444444; }
+  .side-score.green {
+    background: url(../images/small-rating-green.png) no-repeat; }
+  .side-score.darkgreen {
+    background: url(../images/small-rating-darkgreen.png) no-repeat; }
+  .side-score.yellow {
+    background: url(../images/small-rating-yellow.png) no-repeat; }
+  .side-score.darkred {
+    background: url(../images/small-rating-darkred.png) no-repeat; }
+  .side-score.red {
+    background: url(../images/small-rating-red.png) no-repeat; }
+
+#footer-top-wrapper {
+  background: url(../images/footer-top-bg.png) repeat-x;
+  height: 55px; }
+
+#footer-top {
+  width: 960px;
+  margin: 0 auto;
+  padding-top: 20px; }
+  #footer-top a {
+    color: #797979;
+    text-shadow: 1px 1px 1px black; }
+
+  #footer-navigation li {
+    display: block;
+    float: left;
+    margin-right: 10px; }
+  #footer-navigation span {
+    margin-right: 10px; }
+
+#back-top {
+  float: right;
+  background: url(../images/back-top.png) no-repeat right;
+  padding-right: 26px; }
+
+#footer-wrapper {
+  background: url(../images/footer-bg.png) repeat;
+  overflow: hidden;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black; }
+
+#footer {
+  width: 960px;
+  margin: 0 auto;
+  padding-top: 30px; }
+
+.footer-widget {
+  width: 225px; }
+  .footer-widget a {
+    color: #888888;
+    text-shadow: 1px 1px 1px black; }
+  .footer-widget p {
+    color: #888888;
+    text-shadow: 1px 1px 1px black;
+    line-height: 18px; }
+  .footer-widget.left,
+  .footer-widget.middle {
+    float: left;
+    margin-right: 20px; }
+  .footer-widget.right {
+    float: right; }
+  .footer-widget h3 {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    background: url(../images/footer-line.png) repeat-x bottom;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-family: "BebasNeueRegular"; }
+  .footer-widget li {
+    margin-bottom: 10px;
+    background: url(../images/footer-bullet.png) no-repeat left;
+    padding-left: 16px; }
+
+#footer-bottom-wrapper {
+  height: 38px;
+  background: #111111;
+  border-top: 1px solid #222222; }
+
+#footer-bottom {
+  width: 960px;
+  margin: 0 auto;
+  padding-top: 11px; }
+
+.footer-bottom-left {
+  float: left;
+  text-shadow: 1px 1px 1px black; }
+
+.footer-bottom-right {
+  float: right;
+  text-shadow: 1px 1px 1px black; }
+
+.post-meta {
+  color: #989898;
+  font-style: italic;
+  margin-bottom: 14px; }
+
+.post-header {
+  font-size: 36px;
+  margin-bottom: 14px;
+  color: black;
+  font-family: "BebasNeueRegular"; }
+
+.post-thumb {
+  background: url(../images/img-bg.png) repeat;
+  padding: 10px 0 10px 0;
+  margin-bottom: 20px; }
+
+.post-entry {
+  margin-bottom: 10px;
+  overflow: hidden; }
+  .post-entry p {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px; }
+
+.post-share {
+  background: url(../images/img-bg.png) repeat;
+  border-top: 1px solid #cecece;
+  border-bottom: 1px solid #cecece;
+  padding: 10px 0 8px 10px;
+  margin-bottom: 60px; }
+  .post-share p {
+    float: left;
+    font-weight: bold;
+    font-size: 14px;
+    color: #4f4f4f;
+    padding-top: 8px;
+    text-shadow: 1px 1px 1px white; }
+  .post-share ul {
+    padding-left: 22px;
+    overflow: hidden; }
+  .post-share li {
+    float: left;
+    margin-right: 8px; }
+
+.post-review {
+  overflow: hidden; }
+
+.line-top {
+  background: url(../images/img-bg.png) repeat;
+  height: 12px;
+  margin-bottom: 12px; }
+
+.line-bottom {
+  background: url(../images/img-bg.png) repeat;
+  height: 12px;
+  margin-top: 12px;
+  margin-bottom: 20px; }
+
+.review-thumb {
+  float: left;
+  margin-right: 20px;
+  border: 1px solid #dddddd; }
+
+.review-score {
+  border-bottom: 1px dashed #cccccc;
+  overflow: hidden;
+  padding-bottom: 15px;
+  margin-bottom: 15px; }
+
+.overall-score {
+  width: 102px;
+  height: 102px;
+  float: left;
+  position: relative; }
+
+.overall-text {
+  color: #777777;
+  position: absolute;
+  left: 19px;
+  top: 20px;
+  font-size: 10px; }
+
+.the-score {
+  color: #333333;
+  font-family: "BebasNeueRegular";
+  text-shadow: 1px 1px 1px white;
+  font-size: 54px;
+  position: absolute;
+  width: 100%;
+  top: 29px;
+  text-align: center; }
+
+  .overall-score.green {
+    background: url(../images/big-rating-green.png) no-repeat; }
+  .overall-score.darkgreen {
+    background: url(../images/big-rating-darkgreen.png) no-repeat; }
+  .overall-score.yellow {
+    background: url(../images/big-rating-yellow.png) no-repeat; }
+  .overall-score.darkred {
+    background: url(../images/big-rating-darkred.png) no-repeat; }
+  .overall-score.red {
+    background: url(../images/big-rating-red.png) no-repeat; }
+
+.other-score {
+  overflow: hidden; }
+
+.score-item {
+  margin-bottom: 3px;
+  overflow: hidden;
+  position: relative;
+  background: white url(../images/score-bg.png) no-repeat;
+  height: 32px; }
+
+.score-label {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  text-shadow: 1px 1px 1px white;
+  color: #666666; }
+
+.score-bg {
+  height: 32px;
+  display: none;
+  width: 200px;
+  position: absolute;
+  left: 131px; }
+
+.score {
+  color: #777777;
+  text-shadow: 1px 1px 1px white;
+  position: absolute;
+  left: 94px;
+  top: 8px;
+  font-weight: bold; }
+
+.pros {
+  background: url(../images/pros.png) no-repeat;
+  overflow: hidden;
+  padding: 3px 0 3px 36px;
+  margin-bottom: 12px; }
+  .pros p {
+    color: #555555;
+    line-height: 18px; }
+  .pros span {
+    color: #bbbbbb;
+    margin: 0 2px 0 2px; }
+
+.cons {
+  background: url(../images/cons.png) no-repeat;
+  overflow: hidden;
+  padding: 0 0 3px 36px; }
+  .cons p {
+    color: #555555;
+    line-height: 18px; }
+  .cons span {
+    color: #bbbbbb;
+    margin: 0 2px 0 2px; }
+
+#comments h3 {
+  font-size: 14px;
+  border-bottom: 1px dotted #d5d5d5;
+  padding-bottom: 6px;
+  margin-bottom: 30px; }
+
+.comment {
+  margin-bottom: 25px;
+  overflow: hidden;
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 20px; }
+
+.avatar {
+  float: left;
+  margin-right: 20px; }
+
+.comment-details {
+  float: right;
+  width: 520px; }
+  .comment-details p {
+    line-height: 18px;
+    margin-top: 10px; }
+
+.author {
+  font-weight: bold; }
+
+.date {
+  color: #989898; }
+
+.reply {
+  float: right; }
+
+  #comments ol li ul .comment {
+    margin-left: 80px; }
+  #comments ol li ul .comment-details {
+    width: 440px; }
+    #comments ol li ul li ul .comment {
+      margin-left: 160px; }
+    #comments ol li ul li ul .comment-details {
+      width: 360px; }
+
+#comment-form input,
+textarea {
+  padding: 8px;
+  border: 1px solid #d9d9d9;
+  margin-right: 12px;
+  font-family: Arial; }
+
+  #comment-form p {
+    margin-bottom: 18px; }
+  #comment-form .required {
+    color: #838383; }
+
+  .post-screenshot ul {
+    overflow: hidden; }
+  .post-screenshot li {
+    float: left;
+    margin: 4px; }
+    .post-screenshot li img {
+      border: 1px solid #222222; }
+
+  .post-entry h1 {
+    font-size: 28px;
+    margin-bottom: 14px;
+    font-family: "BebasNeueRegular"; }
+  .post-entry h2 {
+    font-size: 24px;
+    margin-bottom: 14px;
+    font-family: "BebasNeueRegular"; }
+  .post-entry h3 {
+    font-size: 20px;
+    margin-bottom: 14px;
+    font-family: "BebasNeueRegular"; }
+  .post-entry h4 {
+    font-size: 18px;
+    margin-bottom: 14px;
+    font-family: "BebasNeueRegular"; }
+  .post-entry h5 {
+    font-size: 16px;
+    margin-bottom: 14px;
+    font-family: "BebasNeueRegular"; }
+  .post-entry h6 {
+    font-size: 14px;
+    margin-bottom: 14px;
+    font-family: "BebasNeueRegular"; }
+  .post-entry hr {
+    border: 0;
+    background-color: #dddddd;
+    height: 1px;
+    margin-bottom: 14px;
+    color: #dddddd; }
+  .post-entry .highlight1 {
+    background: yellow; }
+  .post-entry .highlight2 {
+    background: black;
+    color: #cccccc; }
+  .post-entry ul {
+    margin-left: 14px;
+    margin-bottom: 14px; }
+    .post-entry ul li {
+      background: url(../images/ul-dot.png) no-repeat;
+      padding-left: 10px;
+      margin-bottom: 6px; }
+  .post-entry ol {
+    margin-left: 28px;
+    margin-bottom: 14px; }
+    .post-entry ol li {
+      list-style-type: decimal;
+      margin-bottom: 6px; }
+  .post-entry .alignright {
+    float: right;
+    margin: 0 0 4px 10px; }
+  .post-entry .alignleft {
+    float: left;
+    margin: 0 10px 4px 0; }
+  .post-entry blockquote {
+    background: url(../images/quote.png) no-repeat;
+    padding-left: 32px;
+    padding-top: 3px;
+    margin-left: 25px;
+    color: #777777; }
+
+#pagination {
+  margin-bottom: 20px;
+  clear: both; }
+  #pagination span {
+    background: url(../images/pagination-bg.png) repeat-x;
+    padding: 5px 8px 5px 8px;
+    border: 1px solid #cccccc;
+    margin-right: 3px;
+    text-shadow: 1px 1px 1px white; }
+  #pagination .current {
+    font-weight: bold; }
+
+#review-archive {
+  margin-bottom: 30px; }
+
+.review-item {
+  background: url(../images/review-bg.png) repeat-x;
+  height: 66px;
+  padding: 20px; }
+  .review-item.second {
+    background: url(../images/review-second-bg.png) repeat-x; }
+    .review-item.second.last {
+      border-bottom: 1px solid #d7d7d7; }
+
+.review-item-thumb {
+  float: left;
+  margin-right: 20px;
+  border: 1px solid #333333; }
+
+  .review-item h5 {
+    font-family: "BebasNeueRegular";
+    font-size: 23px;
+    margin-bottom: 6px; }
+    .review-item h5 a {
+      color: black; }
+    .review-item h5 small {
+      color: #777777;
+      font-size: 13px;
+      font-family: Arial;
+      text-shadow: 1px 1px 1px white; }
+  .review-item p {
+    line-height: 18px;
+    color: #656565;
+    text-shadow: 1px 1px 1px white;
+    overflow: hidden; }
+
+.archive-score {
+  float: left;
+  width: 30px;
+  height: 21px;
+  margin-right: 10px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #444444;
+  padding-top: 5px; }
+  .archive-score.green {
+    background: url(../images/small-rating-green.png) no-repeat; }
+  .archive-score.darkgreen {
+    background: url(../images/small-rating-darkgreen.png) no-repeat; }
+  .archive-score.yellow {
+    background: url(../images/small-rating-yellow.png) no-repeat; }
+  .archive-score.darkred {
+    background: url(../images/small-rating-darkred.png) no-repeat; }
+  .archive-score.red {
+    background: url(../images/small-rating-red.png) no-repeat; }
+
+#media-wrapper {
+  margin-bottom: 10px;
+  overflow: hidden; }
+
+.media-item {
+  float: left;
+  width: 290px;
+  margin: 0 20px 20px 0; }
+  .media-item.last {
+    float: right;
+    margin: 0; }
+
+.media-arrows {
+  background: url(../images/media-arrows.png) no-repeat;
+  width: 30px;
+  height: 29px;
+  position: absolute;
+  top: 100px;
+  left: 1px; }
+
+.media-item h4 {
+  margin-bottom: 4px;
+  position: absolute;
+  top: 100px;
+  left: 31px;
+  color: white;
+  background: black;
+  font-size: 14px;
+  padding: 6px;
+  font-family: "BebasNeueRegular"; }
+  .media-item h4 a {
+    color: white; }
+
+.media-thumb {
+  position: relative;
+  margin-right: 12px;
+  float: left; }
+  .media-thumb img {
+    border: 1px solid #cccccc; }
+
+.video-icon {
+  background: url(../images/video-icon.png) no-repeat;
+  height: 21px;
+  width: 24px;
+  position: absolute;
+  right: 8px;
+  top: 8px; }
+
+.screenshot-icon {
+  background: url(../images/screenshot-icon.png) no-repeat;
+  height: 21px;
+  width: 24px;
+  position: absolute;
+  right: 8px;
+  top: 8px; }
+
+.media-meta-wrapper {
+  background: url(../images/section-title.png) repeat;
+  height: 25px;
+  border-bottom: 1px solid #cccccc;
+  margin-top: -3px;
+  padding: 9px 9px 0 9px; }
+  .media-meta-wrapper span {
+    text-shadow: 1px 1px 1px white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+
+.media-meta {
+  color: #777777;
+  float: left; }
+
+.media-cats {
+  float: right;
+  color: #777777; }
+
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('../fonts/BebasNeue-webfont.eot');
+    src: url('../fonts/BebasNeue-webfont.eot?iefix') format('eot'),
+         url('../fonts/BebasNeue-webfont.woff') format('woff'),
+         url('../fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('../fonts/BebasNeue-webfont.svg#webfont4Bjy2lJe') format('svg');
+    font-weight: normal;
+}
