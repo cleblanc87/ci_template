@@ -1,9 +1,9 @@
   <!-- BEGIN TOP NAVIGATION --> 
   <ul id="top-navigation"> 
-    <li><a href="index.php">Home</a></li> 
-    <li><a href="about_us.php">About Us</a></li> 
-    <li><a href="#">Link 3</a></li> 
-    <li><a href="#">Moar Links</a></li> 				
+    <li><a href="<?=base_url()?>">Home</a></li> 
+    <li><a href="<?=base_url()?>signup">Register</a></li> 
+    <li><a href="<?=base_url()?>login">Login</a></li> 
+    <li><a href="<?=base_url()?>logout">Logout</a></li>				
     <li><a href="#">Drop Down</a> 
       <ul> 
         <li><a href="#">Link 1</a></li> 
@@ -12,27 +12,28 @@
         <li><a href="#">Link 4</a></li> 
       </ul> 
     </li> 
+    <li>Hello<?=Current_User::user() ? ", ".Current_User::user()->username : ''?>! </li>
   </ul> 
 <!-- END TOP NAVIGATION --> 
  
 <!-- BEGIN SOCIAL MEDIA --> 
  
 			<div id="social-media"> 
-				<a href="#"><img src="images/facebook.png" alt="" /></a> 
-				<a href="#"><img src="images/twitter.png" alt="" /></a> 
-				<a href="#"><img src="images/rss.png" alt="" /></a> 
+				<a href="#"><img src="<?=base_url()?>images/facebook.png" alt="" /></a> 
+				<a href="#"><img src="<?=base_url()?>images/twitter.png" alt="" /></a> 
+				<a href="#"><img src="<?=base_url()?>images/rss.png" alt="" /></a> 
 			</div> 
 <!-- END SOCIAL MEDIA --> 
  
 <!-- BEGIN LOGO --> 
 			<div id="logo"> 
-				<a href="index.php"><img src="images/logo.png" alt="LeetPress" /></a> 
+				<a href="index.php"><img src="<?=base_url()?>images/logo.png" alt="LeetPress" /></a> 
 			</div> 
 <!-- END LOGO --> 
 			
 <!-- BEGIN HEADER BANNER --> 
 			<div id="header-banner"> 
-				<img src="images/header-banner.png" alt="" /> 
+				<img src="<?=base_url()?>images/header-banner.png" alt="" /> 
 			</div> 
 <!-- END HEADER BANNER --> 
 		<!-- BEGIN NAVIGATION --> 

@@ -2,11 +2,7 @@
 
 class Welcome extends MY_Controller {
   public function index() {
-    $this->load->view('head');
-    $this->load->view('header_start');
-    $this->load->view('header_content');
-    $this->load->view('header_end');
-
+    parent::header_content();
     $this->load->view('slider_begin');
     $this->load->view('slider_item');
     $this->load->view('slider_item');
@@ -40,13 +36,7 @@ class Welcome extends MY_Controller {
     $this->load->view('sidebar_end');
     $this->load->view('end_main');
 
-    $this->load->view('footer_top_begin');
-    $this->load->view('footer_navigation');
-    $this->load->view('footer_top_end');
-
-    $this->load->view('begin_footer');
-    $this->load->view('footer');
-    $this->load->view('end_footer');
+    parent::footer_content();
   }
 
   public function create() {    

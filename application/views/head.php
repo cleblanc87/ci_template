@@ -6,21 +6,14 @@
  
 <title>The Game Wire</title> 
  
-<link rel="stylesheet" href="../../stylesheets/style.css" /> 
+<?=link_tag("stylesheets/style.css")?> 
 	
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script> 
-<script type="text/javascript" src="js/superfish.js"></script> 
-<script type="text/javascript" src="js/mobilyslider.js"></script> 
-<script type="text/javascript" src="js/init.js"></script> 
-<script type="text/javascript" src="js/jquery.fancybox-1.3.4.pack.js"></script> 
-<script type="text/javascript" src="js/jquery.scrollTo.js"></script> 
-<script type="text/javascript" src="js/scripts.js"></script> 
-	
-<script> 
-  $(document).ready(function() { 
-    $('ul#navigation').superfish(); 
-    $('ul#top-navigation').superfish(); 
-  }); 
-</script> 
+<?=js_tag_external("http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js")?>
+<?=js_tag("js/superfish.js")?> 
+<?=js_tag("js/mobilyslider.js")?> 
+<?=js_tag("js/init.js")?> 
+<?=js_tag("js/jquery.fancybox-1.3.4.pack.js")?> 
+<?=js_tag("js/jquery.scrollTo.js")?> 
+<?=js_tag("js/scripts.js")?> 
 	
 </head> 

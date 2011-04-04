@@ -16,3 +16,8 @@ $(function(){
 	});
 	
 });
+
+$(document).ready(function() { 
+  $('ul#navigation').superfish(); 
+  $('ul#top-navigation').superfish(); 
+}); 

@@ -1,5 +1,5 @@
 <!-- BEGIN FEATURED ITEM --> 
-<div class="featured-item" style="background:#000 url(images/featured-image.jpg) no-repeat center; height:280px;"> 				
+<div class="featured-item" style="background:#000 url(<?=base_url()?>images/featured-image.jpg) no-repeat center; height:280px;"> 				
   <div class="featured-inner"> 					
     <div class="featured-inner"> 			
       <div class="featured-arrows"></div> 
